@@ -108,3 +108,91 @@ systemctl   restart  datadog-agent
 ```
 
 
+### some datadog agent command which is platform independent 
+
+```
+ datadog-agent   status 
+Getting the status from the agent.
+
+===============
+Agent (v7.57.2)
+===============
+  Status date: 2024-10-14 10:13:35.855 UTC (1728900815855)
+  Agent start: 2024-10-14 09:56:41.514 UTC (1728899801514)
+  Pid: 7563
+
+```
+
+### using --help 
+
+```
+datadog-agent   --help
+
+The Datadog Agent faithfully collects events and metrics and brings them
+to Datadog on your behalf so that you can do something useful with your
+monitoring and performance data.
+
+Usage:
+  datadog-agent [command]
+
+Available Commands:
+  check                 Run the specified check
+  completion            Generate the autocompletion script for the specified shell
+  config                Print the runtime configuration of a running agent
+  configcheck           Print all configurations loaded & resolved of a running agent
+  diagnose              Validate Agent installation, configuration and environment
+  dogstatsd             Inspect dogstatsd pipeline status
+  dogstatsd-capture     Start a dogstatsd UDS traffic capture
+  dogstatsd-replay      Replay dogstatsd traffic
+  dogstatsd-stats       Print basic statistics on the metrics processed by dogstatsd
+  flare                 Collect a flare and send it to Datadog
+  health                Print the current agent health
+
+
+```
+
+## TSDB -- dataformat 
+
+<img src="tsdb.png">
+
+### agent details 
+
+<img src="ag1.png">
+
+### app servers in industry to host webapps
+
+<img src="apps1.png">
+
+### app server Understanding 
+
+<img src="ps1.png">
+
+## Hosting a sample Html code in linux machine 
+
+### taking code from developer 
+
+```
+
+[root@ip-172-31-92-124 ~]# dnf install git -y 
+Amazon Linux 2023 repository                  
+
+===> use git clone to download the code 
+
+git  clone  https://github.com/redashu/LKQ_webapp.git
+
+Cloning into 'LKQ_webapp'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+[root@ip-172-31-92-124 ~]# ls
+LKQ_webapp  ddagent-install.log
+
+[root@ip-172-31-92-124 ~]# ls LKQ_webapp/
+README.md  index.html
+[root@ip-172-31-92-124 ~]# 
+
+```
+
