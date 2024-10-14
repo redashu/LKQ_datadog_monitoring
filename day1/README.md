@@ -195,4 +195,22 @@ README.md  index.html
 [root@ip-172-31-92-124 ~]# 
 
 ```
+### setup httpd in linux machine  (http app server)
 
+```
+dnf install httpd -y 
+
+===> copy code to app server location 
+
+ls
+LKQ_webapp  ddagent-install.log
+[root@ip-172-31-92-124 ~]# cp -v LKQ_webapp/index.html   /var/www/html/
+'LKQ_webapp/index.html' -> '/var/www/html/index.html'
+[root@ip-172-31-92-124 ~]# 
+
+===> starting app server 
+
+
+systemctl start httpd
+
+```
