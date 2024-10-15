@@ -104,3 +104,35 @@ process_config:
   process_collection:
     enabled: true
 ```
+
+### in linux i am making a change 
+
+```
+nano  /etc/datadog-agent/datadog.yaml 
+
+===
+
+datadog-agent  configcheck
+
+=== container_image check ===
+Configuration provider: file
+Configuration source: file:/etc/datadog-agent/conf.d/container_image.d/conf.yaml.default
+Config for instance ID: container_image:352c6bb6615b44c3
+{}
+~
+Auto-discovery IDs:
+
+```
+
+### restart service 
+
+```
+systemctl  restart datadog-agent
+[root@ip-172-31-92-124 ~]# systemctl  status  datadog-agent
+● datadog-agent.service - Datadog Agent
+     Loaded: loaded (/usr/lib/systemd/system/datadog-agent.service; enabled; preset: disabled)
+     Active: active (running) since Tue 2024-10-15 09:02:07 UTC; 5s ago
+   Main PID: 28677 (agent)
+      Tasks: 8 (limit: 4658)
+
+```
