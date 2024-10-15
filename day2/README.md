@@ -92,3 +92,15 @@ index.html
 [root@ip-172-31-92-124 ~]# 
 
 ```
+
+## enable live process monitoring using datadog agent in linux & windows systems
+
+[click_here](https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows)
+
+### you can change in datadog.yaml file 
+
+```
+process_config:
+  process_collection:
+    enabled: true
+```
