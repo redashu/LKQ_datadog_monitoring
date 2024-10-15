@@ -136,3 +136,12 @@ systemctl  restart datadog-agent
       Tasks: 8 (limit: 4658)
 
 ```
+
+### datadog agent to datadog cloud account 
+
+<img src="dda1.png">
+
+## for checking pricing 
+
+[click_here](https://www.datadoghq.com/pricing/)
+
