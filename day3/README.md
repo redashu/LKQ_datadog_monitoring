@@ -81,3 +81,15 @@ root
 [root@ip-172-31-92-124 ~]# 
 
 ```
+
+### open file 
+
+```
+nano  /etc/datadog-agent/datadog.yaml 
+
+===>
+datadog-agent configcheck 
+===>
+
+systemctl restart datadog-agent
+```
