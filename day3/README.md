@@ -93,3 +93,10 @@ datadog-agent configcheck
 
 systemctl restart datadog-agent
 ```
+
+### to verify tags 
+
+```
+datadog-agent status
+
+```
