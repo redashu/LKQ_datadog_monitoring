@@ -39,3 +39,25 @@ https://app.datadoghq.com/
 
 <img src="cpu2.png">
 
+## Grouping and filtering concept in datadog 
+
+<img src="ddf.png">
+
+## tags info 
+
+<img src="tag1.png">
+
+### tag limits 
+
+<img src="tag2.png">
+
+### Tags changing places 
+
+<img src="tag3.png">
+
+### Reserver tags key
+
+[click_here](https://docs.datadoghq.com/getting_started/tagging/)
+
+<img src="tag4.png">
+
