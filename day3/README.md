@@ -61,3 +61,23 @@ https://app.datadoghq.com/
 
 <img src="tag4.png">
 
+### sample tag changing data in yaml file 
+
+```
+tags:
+  - "system:local_windows"
+  - "microsoft:w10"
+  - "ashu:mylaptop_2"
+```
+
+### login to linux machine with root user 
+
+```
+[ec2-user@ip-172-31-92-124 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-92-124 ~]$ sudo -i
+[root@ip-172-31-92-124 ~]# whoami
+root
+[root@ip-172-31-92-124 ~]# 
+
+```
