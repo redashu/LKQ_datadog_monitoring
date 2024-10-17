@@ -106,3 +106,21 @@ cp conf.yaml.default  conf.yaml
    Main PID: 21237 (agent)
       Tasks: 8 (limit: 4658)
 ```
+
+### containers 
+
+```
+docker run -itd  --name ashucweb1  -p 1235:80  nginx 
+28b11a9be258bd699b0295fc5aef215d4ec6aa6c495d2564425f0abd1292e890
+[root@ip-172-31-92-124 docker.d]# docker run -itd  --name ashucweb2  -p 1236:80  nginx 
+242fd019122eadb6cedc9680914067cc8b7fe687314b6898c72519d5c98bd4fa
+[root@ip-172-31-92-124 docker.d]# docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS                                   NAMES
+242fd019122e   nginx     "/docker-entrypoint.…"   3 seconds ago       Up 2 seconds       0.0.0.0:1236->80/tcp, :::1236->80/tcp   ashucweb2
+28b11a9be258   nginx     "/docker-entrypoint.…"   11 seconds ago      Up 10 seconds      0.0.0.0:1235->80/tcp, :::1235->80/tcp   ashucweb1
+10a18c4758cc   python    "python3"                52 minutes ago      Up 52 minutes                                              ashuc2
+048f7f6a9087   nginx     "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:1234->80/tcp, :::1234->80/tcp   ashuc1
+[root@ip-172-31-92-124 docker.d]# 
+
+
+```
