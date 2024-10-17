@@ -124,3 +124,10 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS    
 
 
 ```
+
+### creating 2 more webapp container 
+
+```
+docker run -itd  --name ashucweb1  -p 1235:80  nginx 
+docker run -itd  --name ashucweb2  -p 1236:80  nginx
+```
