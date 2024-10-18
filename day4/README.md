@@ -138,3 +138,8 @@ docker run -itd  --name ashucweb2  -p 1236:80  nginx
 docker run -itd --name ashuapp2 alpine 
 docker run -itd --name ashuapp1 alpine 
 ```
+
+## NTP -- time sync between local system to Internal clock
+
+<img src="ntp.png">
+
