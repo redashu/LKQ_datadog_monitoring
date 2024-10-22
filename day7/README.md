@@ -127,3 +127,52 @@ access_log  access_log-20241022  error_log  error_log-20241022
 [root@ip-172-31-92-124 httpd]# 
 
 ```
+
+### Logging tools 
+
+<img src="logss.png">
+
+
+### checking logs agent in datadog client 
+
+```
+datadog-agent status  | grep -i logs
+
+```
+
+### logs with datadog integration 
+
+<img src="logsd1.png">
+
+### enable log agent in datadog.yaml 
+
+```
+logs_enabled: true
+```
+### enable apache logs 
+
+```
+root@ip-172-31-92-124 httpd]# cat /etc/datadog-agent/conf.d/apache.d/conf.yaml
+#Log section
+logs:
+
+    # - type : (mandatory) type of log input source (tcp / udp / file)
+    #   port / path : (mandatory) Set port if type is tcp or udp. Set path if type is file
+    #   service : (mandatory) name of the service owning the log
+    #   source : (mandatory) attribute that defines which integration is sending the log
+    #   sourcecategory : (optional) Multiple value attribute. Can be used to refine the source attribute
+    #   tags: (optional) add tags to each log collected
+
+  - type: file
+    path: /var/log/httpd/access_log 
+    source: apache
+    sourcecategory: http_web_access
+    service: ashuservice
+
+  - type: file
+    path: /var/log/httpd/error_log
+    source: apache
+    sourcecategory: http_web_access
+    service: ashuservice
+
+```
