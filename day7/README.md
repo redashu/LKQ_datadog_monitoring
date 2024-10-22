@@ -176,3 +176,22 @@ logs:
     service: ashuservice
 
 ```
+
+### logs by datadog 
+
+<img src="logdd.png">
+
+### logs of containers 
+# in datadog.yaml 
+```
+listeners:
+  - name: docker
+config_providers:
+  - name: docker
+    polling: true
+logs_config:
+  container_collect_all: true
+```
+
+### restart service 
+
