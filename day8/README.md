@@ -169,3 +169,52 @@ Collecting cattrs==22.2.0
   Downloading cattrs-22.2.0-py3-none-any.whl (35 kB)
 
 ```
+
+### In some cases your app may show incompatibilty error so UPgrade libs
+
+```
+ pip install --upgrade SQLAlchemy Flask-SQLAlchemy
+```
+
+### run your app
+
+```
+python3  weather_1.py 
+ * Serving Flask app 'weather_1'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.31.92.124:8000
+Press CTRL+C to quit
+106.219.68.125 - - [23/Oct/2024 09:31:36] "GET / HTTP/1.1" 200 -
+106.219.68.125 - - [23/Oct/2024 09:31:37] "GET /favicon.ico HTTP/1.1" 404 -
+
+
+
+```
+
+### lets run app by datadog -- using ddtrace
+
+<img src="ddtrace.png">
+
+
+### Installing ddtrace 
+
+```
+pip install --upgrade ddtrace
+```
+### running app after setting env 
+
+```
+                                                 DD_SERVICE="ashu-flask"
+[root@ip-172-31-92-124 python-flask-weathermap]# DD_ENV="dev"
+[root@ip-172-31-92-124 python-flask-weathermap]# DD_LOGS_INJECTION=true
+[root@ip-172-31-92-124 python-flask-weathermap]# ls
+env_var.bat  requirements.txt  templates  weather.db  weather_1.py
+[root@ip-172-31-92-124 python-flask-weathermap]# ddtrace-run  python3  weather_1.py  
+
+
+
+
+```
