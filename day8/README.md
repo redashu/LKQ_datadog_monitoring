@@ -11,4 +11,11 @@
 <img src="ansible2.png">
 
 
+### User and Permission management in Datadog account 
+
+<img src="ddu1.png">
+
+### account disable 
+
+<img src="acc1.png">
 
